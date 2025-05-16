@@ -16,7 +16,7 @@ import java.util.Random;
 import pt.ulisboa.tecnico.cnv.javassist.tools.ICount;
 import pt.ulisboa.tecnico.cnv.javassist.model.Statistics;
 
-import pt.ulisboa.tecnico.cnv.storage.util.StorageUtil;
+import pt.ulisboa.tecnico.cnv.storage.StorageUtil;
 
 public class FifteenPuzzleHandler implements HttpHandler, RequestHandler<Map<String, String>, String> {
 
