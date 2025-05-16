@@ -1,2 +1,2 @@
 # cnv2425
-Assignments for the Cloud Computing and Virtualization course
+Games@Cloud Project for the Cloud Computing and Virtualization course
