@@ -17,13 +17,13 @@ public class ICount extends CodeDumper {
     }
 
     public static Statistics getThreadStatistics(){
-        Long myId = Thread.currentThread().threadId();
+        Long myId = Thread.currentThread().getId();
         threadPoolStatistics.putIfAbsent(myId, new Statistics());
         return threadPoolStatistics.get(myId);
     }
 
     public static void clearThreadStatistics() {
-        threadPoolStatistics.remove(Thread.currentThread().threadId());
+        threadPoolStatistics.remove(Thread.currentThread().getId());
     }
 
 

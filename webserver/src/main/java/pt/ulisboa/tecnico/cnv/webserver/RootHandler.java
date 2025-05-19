@@ -6,7 +6,6 @@ import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpExchange;
 import java.net.URI;
 
-
 public class RootHandler implements HttpHandler {
 
     private final String HELLO_MSG = "Default Web Server<br>";
@@ -22,7 +21,6 @@ public class RootHandler implements HttpHandler {
             return;
         }
 
-
         // parse request
         URI requestedUri = he.getRequestURI();
         String query = requestedUri.getRawQuery();
@@ -31,6 +29,5 @@ public class RootHandler implements HttpHandler {
         System.out.println(query);
 
         he.sendResponseHeaders(200, 0);
-        he.close();
     }
 }
