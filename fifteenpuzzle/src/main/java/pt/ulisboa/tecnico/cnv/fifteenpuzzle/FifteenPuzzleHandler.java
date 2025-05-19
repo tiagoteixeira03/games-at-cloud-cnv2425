@@ -75,7 +75,8 @@ public class FifteenPuzzleHandler implements HttpHandler, RequestHandler<Map<Str
         os.close();
 
         Statistics requestStatistics = ICount.getThreadStatistics();
-        StorageUtil.storeStatistics(parameters, requestStatistics);
+        StorageUtil.storeStatistics(parameters, requestStatistics, "FifteenPuzzle");
+        ICount.clearThreadStatistics();
     }
 
 

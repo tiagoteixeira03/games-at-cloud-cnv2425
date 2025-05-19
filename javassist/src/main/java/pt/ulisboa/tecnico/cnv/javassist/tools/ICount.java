@@ -22,6 +22,11 @@ public class ICount extends CodeDumper {
         return threadPoolStatistics.get(myId);
     }
 
+    public static void clearThreadStatistics() {
+        threadPoolStatistics.remove(Thread.currentThread().threadId());
+    }
+
+
     public static void incBasicBlock(int position, int length) {
         Statistics currentThreadStatistics = getThreadStatistics();
         currentThreadStatistics.incrementNblocks();

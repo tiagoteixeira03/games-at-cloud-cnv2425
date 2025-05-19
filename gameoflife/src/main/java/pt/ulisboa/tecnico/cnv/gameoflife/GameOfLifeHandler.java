@@ -125,7 +125,8 @@ public class GameOfLifeHandler implements HttpHandler, RequestHandler<Map<String
         os.close();
 
         Statistics requestStatistics = ICount.getThreadStatistics();
-        StorageUtil.storeStatistics(parameters, requestStatistics);
+        StorageUtil.storeStatistics(parameters, requestStatistics, "GameOfLife");
+        ICount.clearThreadStatistics();
     }
 
     /**

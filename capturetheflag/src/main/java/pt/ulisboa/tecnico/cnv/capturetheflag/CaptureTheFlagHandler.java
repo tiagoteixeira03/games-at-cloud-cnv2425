@@ -76,7 +76,8 @@ public class CaptureTheFlagHandler implements HttpHandler, RequestHandler<Map<St
         os.close();
 
         Statistics requestStatistics = ICount.getThreadStatistics();
-        StorageUtil.storeStatistics(parameters, requestStatistics);
+        StorageUtil.storeStatistics(parameters, requestStatistics, "CaptureTheFlag");
+        ICount.clearThreadStatistics();
     }
 
     /**

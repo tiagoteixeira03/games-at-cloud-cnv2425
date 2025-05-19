@@ -14,18 +14,24 @@ public class StorageUtil {
 
     private static final String OUTPUT_FILE = "statistics.json";
 
-    public static void storeStatistics(Map<String, String> parameters, Statistics statistics) {
+    public static void storeStatistics(Map<String, String> parameters, Statistics statistics, String game) {
         ObjectMapper mapper = new ObjectMapper();
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
 
-        // Combine parameters and statistics into a single Map
-        Map<String, Object> record = new HashMap<>(parameters);
-        record.put("nblocks", statistics.getNblocks());
-        record.put("nmethod", statistics.getNmethod());
-        record.put("ninsts", statistics.getNinsts());
+
+
+        // Separate parameters and metrics into nested maps
+        Map<String, Object> record = new HashMap<>();
+        record.put("game", game);
+        record.put("parameters", new HashMap<>(parameters));
+
+        Map<String, Object> metrics = new HashMap<>();
+        metrics.put("nblocks", statistics.getNblocks());
+        metrics.put("nmethod", statistics.getNmethod());
+        metrics.put("ninsts", statistics.getNinsts());
+        record.put("metrics", metrics);
 
         List<Map<String, Object>> records = new ArrayList<>();
-
         File file = new File(OUTPUT_FILE);
 
         // Load existing records if the file exists
