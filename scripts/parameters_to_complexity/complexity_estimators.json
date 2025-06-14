@@ -1,0 +1,127 @@
+{
+    "FifteenPuzzle": {
+        "intercept": 13.911182271961003,
+        "coefficients": [
+            2.7197878925380454,
+            -2.8012436729844765,
+            -0.700637577062229,
+            1.125892037431241,
+            0.6631370317346617,
+            -0.3122297659104736,
+            0.6075140717414949,
+            0.6158385604063749,
+            0.46671759524734224
+        ],
+        "feature_names": [
+            "shuffles",
+            "size",
+            "shuffles^2",
+            "shuffles*size",
+            "size^2",
+            "shuffles^3",
+            "shuffles^2*size",
+            "shuffles*size^2",
+            "size^3"
+        ],
+        "is_log_transformed": true,
+        "scaler_params": {
+            "mean": [
+                57.372727272727275,
+                10.6
+            ],
+            "scale": [
+                14.775815061911194,
+                2.8514748974713227
+            ]
+        },
+        "metrics": {
+            "train_r2": 0.6906386545455108,
+            "test_r2": 0.7671230566933173,
+            "test_mse": 2.02269434209126,
+            "test_rmse": 1.4222145907320949
+        }
+    },
+    "CaptureTheFlag": {
+        "intercept": 16.444668341118454,
+        "coefficients": [
+            0.5566244161369187,
+            0.5566244161369189,
+            0.5566244161369186,
+            -0.582629164084132,
+            -0.26080560520453505,
+            -0.06481903585870188,
+            -0.06481903585870182,
+            -0.06481903585870176,
+            -0.0360513570832752,
+            0.0029728806640509087,
+            -0.06481903585870176,
+            -0.06481903585870176,
+            -0.0360513570832752,
+            0.0029728806640509087,
+            -0.06481903585870176,
+            -0.0360513570832752,
+            0.0029728806640509087,
+            -0.5826291640841318,
+            0.0,
+            -0.26080560520453455
+        ],
+        "feature_names": [
+            "gridSize",
+            "numBlueAgents",
+            "numRedAgents",
+            "flagPlacementType_B",
+            "flagPlacementType_C",
+            "gridSize^2",
+            "gridSize*numBlueAgents",
+            "gridSize*numRedAgents",
+            "gridSize*flagPlacementType_B",
+            "gridSize*flagPlacementType_C",
+            "numBlueAgents^2",
+            "numBlueAgents*numRedAgents",
+            "numBlueAgents*flagPlacementType_B",
+            "numBlueAgents*flagPlacementType_C",
+            "numRedAgents^2",
+            "numRedAgents*flagPlacementType_B",
+            "numRedAgents*flagPlacementType_C",
+            "flagPlacementType_B^2",
+            "flagPlacementType_B*flagPlacementType_C",
+            "flagPlacementType_C^2"
+        ],
+        "is_log_transformed": true,
+        "scaler_params": {
+            "mean": [
+                24.36111111111111,
+                19.36111111111111,
+                19.36111111111111
+            ],
+            "scale": [
+                8.614112380202933,
+                8.614112380202933,
+                8.614112380202933
+            ]
+        },
+        "metrics": {
+            "train_r2": 0.9875805837819952,
+            "test_r2": 0.9864424937191626,
+            "test_mse": 0.04108481675484538,
+            "test_rmse": 0.20269389915546393
+        }
+    },
+    "GameOfLife": {
+        "intercept": 67.17800871655345,
+        "coefficients": [
+            893.8556339255783
+        ],
+        "feature_names": [
+            "iterations"
+        ],
+        "is_log_transformed": false,
+        "scaler_params": null,
+        "metrics": {
+            "train_r2": 0.9999999999999966,
+            "test_r2": 0.999999999999995,
+            "test_mse": 0.117499695480806,
+            "test_rmse": 0.34278228583286796
+        }
+    }
+}
